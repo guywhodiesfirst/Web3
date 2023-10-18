@@ -69,6 +69,11 @@
     box-sizing: border-box;
     background-color:#f5f1ed;
 }
+.left_centre{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 5px;
+}
 
 @media screen and (max-width: 1200px)
 {
@@ -80,7 +85,7 @@
 @media screen and (max-width: 998px)
 {
     .main_container {
-        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         display: grid;
@@ -100,6 +105,31 @@
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         display: grid;
+    }
+    .central_container{
+        grid-template-columns: 1fr 1fr;      
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "left centre"
+            "left centre"
+            "left centre"
+            "right right";
+    }
+    .left_1{
+        height:1fr;
+    }
+    .left_2{
+        height: 1fr;
+    }
+    .sidebar_right{
+        height: 1fr;
+        grid-area: right;
+    }
+    .sidebar_left{
+        grid-area: left;
+    }
+    .center{
+        grid-area: centre;
     }
     .headblock {
         font-size: 18px;
@@ -121,35 +151,48 @@
 @media screen and (max-width: 468px)
 {
     .main_container {
-        grid-template-rows: 1fr 6fr 1fr;
+        grid-template-rows: 1fr 5fr 1fr;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         display: grid;
     }
-    .central_container {
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        box-sizing: border-box;
-        grid-column-gap: 5px;
+    .central_container{
+        grid-template-columns: 1fr 1fr;      
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "left centre"
+            "left centre"
+            "left centre"
+            "right right";
     }
-    .center_block1 {
-        padding: 7px;
+    .left_1{
+        height:1fr;
+    }
+    .left_2{
+        height: 1fr;
+    }
+    .sidebar_right{
+        height: 1fr;
+        grid-area: right;
+    }
+    .sidebar_left{
+        grid-area: left;
+    }
+    .center{
+        grid-area: centre;
+    }
+    .headblock {
+        font-size: 18px;
     }
     .center_block1 h3
     {
-        font-size: 14px;
-    }
-    .headblock {
-        font-size: 14px;
-    }
-    .sidebar_right {
-        padding: 5px;
-        display: grid;
-        box-sizing: border-box;
-        background-color:#f5f1ed;
+        font-size: 16px;
     }
     .footer {
-        padding: 10px;
-        align-content: center;
+        display: grid;
+        background-color: #a6a4df;
+        box-sizing: border-box;
+        padding: 30px; 
+        overflow: hidden;
     }
 }
